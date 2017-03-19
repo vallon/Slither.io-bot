@@ -7,14 +7,14 @@ The MIT License (MIT)
 */
 // ==UserScript==
 // @name         Slither.io Bot Championship Edition
-// @namespace    https://github.com/j-c-m/Slither.io-bot
+// @namespace    https://github.com/vallon/Slither.io-bot
 // @version      3.0.5
 // @description  Slither.io Bot Championship Edition
 // @author       Jesse Miller
 // @match        http://slither.io/
-// @updateURL    https://github.com/j-c-m/Slither.io-bot/raw/master/bot.user.js
-// @downloadURL  https://github.com/j-c-m/Slither.io-bot/raw/master/bot.user.js
-// @supportURL   https://github.com/j-c-m/Slither.io-bot/issues
+// @updateURL    https://github.com/vallon/Slither.io-bot/raw/master/bot.user.js
+// @downloadURL  https://github.com/vallon/Slither.io-bot/raw/master/bot.user.js
+// @supportURL   https://github.com/vallon/Slither.io-bot/issues
 // @grant        none
 // ==/UserScript==
 
@@ -412,19 +412,19 @@ var bot = window.bot = (function (window) {
         currentFood: {},
         opt: {
             // target fps
-            targetFps: 20,
+            targetFps: 30, // was 20
             // size of arc for collisionAngles
             arcSize: Math.PI / 8,
             // radius multiple for circle intersects
-            radiusMult: 10,
+            radiusMult: 25,
             // food cluster size to trigger acceleration
-            foodAccelSz: 200,
+            foodAccelSz: 9999,
             // maximum angle of food to trigger acceleration
             foodAccelDa: Math.PI / 2,
             // how many frames per action
-            actionFrames: 2,
+            actionFrames: 1,
             // how many frames to delay action after collision
-            collisionDelay: 10,
+            collisionDelay: 1,
             // base speed
             speedBase: 5.78,
             // front angle size
