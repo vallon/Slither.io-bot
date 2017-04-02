@@ -6,10 +6,10 @@ The MIT License (MIT)
  https://jmiller.mit-license.org/
 */
 // ==UserScript==
-// @name         Slither.io Bot Championship Edition
+// @name         Slither.io Bot Vallon
 // @namespace    https://github.com/vallon/Slither.io-bot
-// @version      3.0.5.2
-// @description  Slither.io Bot Championship Edition
+// @version      3.0.5.3
+// @description  Slither.io Bot
 // @author       Jesse Miller
 // @match        http://slither.io/
 // @updateURL    https://github.com/vallon/Slither.io-bot/raw/master/bot.user.js
