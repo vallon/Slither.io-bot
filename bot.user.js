@@ -1583,22 +1583,24 @@ var bot = window.bot = (function (window) {
             if (bot.stage === 'circle') {
                 window.setAcceleration(bot.defaultAccel);
                 bot.followCircleSelf();
-            } else if (bot.checkCollision() || bot.checkEncircle()) {
-                if (bot.actionTimeout) {
-                    window.clearTimeout(bot.actionTimeout);
-                    bot.actionTimeout = window.setTimeout(
-                        bot.actionTimer, 1000 / bot.opt.targetFps * bot.opt.collisionDelay);
-                }
             } else {
                 if (bot.snakeLength > bot.opt.followCircleLength) {
-                    bot.stage = 'tocircle';
+		    bot.stage = 'tocircle';
                 }
-                if (bot.actionTimeout === undefined) {
-                    bot.actionTimeout = window.setTimeout(
-                        bot.actionTimer, 1000 / bot.opt.targetFps * bot.opt.actionFrames);
-                }
-                window.setAcceleration(bot.foodAccel());
+		if (bot.checkCollision() || bot.checkEncircle()) {
+                    if (bot.actionTimeout) {
+			window.clearTimeout(bot.actionTimeout);
+			bot.actionTimeout = window.setTimeout(
+                            bot.actionTimer, 1000 / bot.opt.targetFps * bot.opt.collisionDelay);
+                    }
+		} else {
+                    if (bot.actionTimeout === undefined) {
+			bot.actionTimeout = window.setTimeout(
+                            bot.actionTimer, 1000 / bot.opt.targetFps * bot.opt.actionFrames);
+                    }
+                    window.setAcceleration(bot.foodAccel());
             }
+	    }
         },
 
         // Timer version of food check
