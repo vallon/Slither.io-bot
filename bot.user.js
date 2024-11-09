@@ -8,7 +8,7 @@ The MIT License (MIT)
 // ==UserScript==
 // @name         Slither.io Bot Vallon
 // @namespace    https://github.com/vallon/Slither.io-bot
-// @version      3.0.5.3
+// @version      3.0.5.4
 // @description  Slither.io Bot
 // @author       Jesse Miller
 // @match        https://slither.com/
