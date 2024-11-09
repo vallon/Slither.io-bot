@@ -11,7 +11,7 @@ The MIT License (MIT)
 // @version      3.0.5.3
 // @description  Slither.io Bot
 // @author       Jesse Miller
-// @match        http://slither.io/
+// @match        https://slither.com/
 // @updateURL    https://github.com/vallon/Slither.io-bot/raw/master/bot.user.js
 // @downloadURL  https://github.com/vallon/Slither.io-bot/raw/master/bot.user.js
 // @supportURL   https://github.com/vallon/Slither.io-bot/issues
